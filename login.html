@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KILLUA Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="panel">
+    <div class="mark">K</div>
+    <h1>KILLUA <span>Login</span></h1>
+    <p class="subtitle">Acede à tua conta KILLUA</p>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="message">{{ messages[0] }}</div>
+      {% endif %}
+    {% endwith %}
+    <form method="post">
+      <label for="identifier">Número de telefone ou e-mail</label>
+      <input id="identifier" name="identifier" type="text"
+             placeholder="Número de telefone ou e-mail" autocomplete="username" required>
+      <label for="password">Senha</label>
+      <input id="password" name="password" type="password"
+             placeholder="Senha da tua conta KILLUA" autocomplete="current-password" required>
+      <button type="submit">Iniciar sessão</button>
+    </form>
+    <p class="note">Na primeira utilização, os dados criam uma conta KILLUA. Usa uma senha própria desta plataforma, nunca a senha do Facebook ou de outro serviço.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KILLUA Login — Conta</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="panel">
+    <div class="mark">K</div>
+    <h1>Bem-vindo!</h1>
+    <p class="subtitle">Sessão iniciada na tua conta KILLUA.</p>
+    <p class="account">Identificador: {{ identifier }}</p>
+    <a class="button-link" href="{{ url_for('logout') }}">Terminar sessão</a>
+  </main>
+</body>
+</html>
